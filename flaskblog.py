@@ -9,7 +9,7 @@ app = Flask(__name__)
 #see decorator example for understanding.
 @app.route("/")
 @app.route("/home")
-def hello():
+def home():
     #the second argument means that whatever variable we pass into the render_template function, 
     #it will be accessible by that same function. (posts can be now elaborated)
     return render_template('home.html', title='')

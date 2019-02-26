@@ -1,0 +1,89 @@
+<!--Layout is a sort of "template" for our html file. With this layout, we can reuse the same
+	html code for more than 1 files, reducing redundancy and making the code less static.-->
+  <!doctype html>
+  <html lang="en">
+    <head>
+
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      
+      <!--Icon CSS-->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+      
+      <!--W3 CSS-->
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+      <!--Custom CSS-->
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='menubar.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='text.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='icons.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='buttons.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='posts.css') }}">
+      
+      <!--if there is a title passed into the render template python function, load it into the page name, 
+        else give the default name.-->
+      {% if title %}
+        <title>Flask Blog - {{ title }}</title>
+      {% else %}
+        <title>Flask Blog</title>
+      {% endif %}
+    
+    </head>
+    <body>
+      
+      <!--Search bar on our site.-->
+      {% if title=='Home' %}
+        <!--Load main home css-->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main_home.css') }}">
+
+        <div id='menubar'>
+          <ul>
+            <li class='active'><a href='/home'><span>Home</span></a></li>
+            <li><a href='/about'><span>About</span></a></li>
+            <li class='last'><a href='/posts'><span>Posts</span></a></li>
+          </ul>
+        </div>
+      {% elif title=='About' %}
+        <!--Load main about css-->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main_about.css') }}">
+
+        <div id='menubar'>
+          <ul>
+            <li><a href='/home'><span>Home</span></a></li>
+            <li class='active'><a href='/about'><span>About</span></a></li>
+            <li class='last'><a href='/posts'><span>Posts</span></a></li>
+          </ul>
+        </div>
+      {% elif title=='Posts' %}
+      <!--Load main home css (for the moment)-->
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main_posts.css') }}">
+      
+      <div id='menubar'>
+          <ul>
+            <li><a href='/home'><span>Home</span></a></li>
+            <li><a href='/about'><span>About</span></a></li>
+            <li class='active'><a href='/posts'><span>Posts</span></a></li>
+          </ul>
+        </div>
+      {% endif %}
+        
+      
+      <!--Block content represent the block that needs to be overrided by the children file who inherit
+        this layout file. here, the children file will replace the block content with the same syntax in their code,
+        avoiding to write again and again the same structure.-->  
+      {% block content %}{% endblock content %}
+      
+      <script src="url_for('static', filename='menu.js')"></script>
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    </body>
+  </html>

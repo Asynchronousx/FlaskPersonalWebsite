@@ -1,0 +1,45 @@
+<!--This HTML file use the Template Inheritance to refer a static html code shared between files, the structure
+needed repeated among them. extending "layout.html we're using the file layout to refer the static html codes. 
+With block content what we're doing is overriding the block content section in layout, to make our owns."-->
+{% extends "layout.html" %}
+{% block content %}
+    <!--Note: the syntax bracket - percentual / code / percentual - bracket refers as a codeblock. We can do this thanks to Jinja2, 
+    the html engine. we could write programming logic into those blocks. Also, the block {{ something }} 
+    refers to variables values.-->
+    <div class="w3-container w3-center w3-animate-opacity">
+        <div class="home-center-home">
+            <h1>
+                <div class="text"><b>Giovanni-Hauber@Asynchronousx:~$</b></div>
+            </h1>
+            <p><i>Software developer with a genuine passion for <code>coding.</code></i></p>
+
+            <!--Icons-->
+            <a title="GitHub - Asynchronousx" target="_blank" href="https://github.com/Asynchronousx">
+                <div class="icon-social">
+                    <i class="fab fa-github"></i>
+                </div>
+            </a>
+
+            <a title="Linkedin - Giovanni Hauber" target="_blank" href="https://www.linkedin.com/in/giovanni-hauber-060214152">
+                <div class="icon-social">
+                    <i class="fab fa-linkedin"></i>
+                </div>
+            </a>
+
+            <a title="Curriculim Vitae" target="_blank" href="/resumee">
+                <div class="icon-social">
+                    <i class="fas fa-id-card"></i>
+                </div>
+            </a>
+
+            <a title="Send me a Mail!" target="_blank" href="mailto:hauber.giovanni@gmail.com">
+                <div class="icon-social">
+                    <i class="fas fa-envelope"></i>
+                </div>
+            </a>
+
+            <p class="copyright">© 2019 Giovanni Hauber</p>
+
+        </div>
+    </div>
+{% endblock content %}

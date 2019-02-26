@@ -1,0 +1,32 @@
+/*Basic element styling*/
+body {
+ /*previous: #34495e*/
+  background-color: #494f5c;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+
+}
+h1 {
+  color: #c6cddb;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif 
+}
+p {
+  color: #c6cddb;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: .06em;
+  max-width: 57%;
+  word-wrap:break-word;
+}
+
+.copyrightBox {
+  position:relative;
+}
+.copyright {
+  font-size: 8px;
+  position:fixed;
+  bottom:30px;
+  right:46.2%;
+}
+

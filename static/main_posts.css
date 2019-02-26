@@ -1,0 +1,101 @@
+/*Basic element styling*/
+body {
+ /*previous: #34495e*/
+  background-color: #494f5c;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+    /* Make sure the inner div is not larger than the container
+     * so that we have room to scroll.
+     */
+    max-height: 100%;
+
+    /* Pick an arbitrary margin/padding that should be bigger
+     * than the max width of all the scroll bars across
+     * the devices you are targeting.
+     * padding = -margin
+     */
+    margin-right: -100px;
+    padding-right: 100px;
+
+}
+
+h1 {
+  color: #c6cddb;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif 
+}
+p {
+  color: #c6cddb;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: .06em;
+  max-width: 57%;
+  word-wrap:break-word;
+}
+
+button, button:active, button:focus {
+  outline: none;
+}
+
+a {
+  box-shadow: inset 0 -4px 0 #018574;
+ }
+
+
+ .copyrightBox {
+  position:relative;
+}
+.copyright {
+  font-size: 8px;
+  position:fixed;
+  bottom:30px;
+  right:46.2%;
+}
+
+.links {
+  box-shadow: inset 0 -4px 0 #018574;
+}
+
+.format-date {
+  font-size: 8px;
+  color: #898e97;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+}
+
+.format-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #c6cddb;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  letter-spacing: .06em;
+}
+
+.format-content {
+  font-size: 9px;
+  color: #c6cddb;
+  margin-bottom: 5%;
+  max-width: 90%;
+  word-wrap:break-word;
+}
+
+.hide-scroll {
+  overflow: hidden;
+}
+
+.viewport {
+  overflow: auto;
+  /* Make sure the inner div is not larger than the container
+   * so that we have room to scroll.
+   */
+  max-height: 100%;
+  height: inherited;
+
+  /* Pick an arbitrary margin/padding that should be bigger
+   * than the max width of all the scroll bars across
+   * the devices you are targeting.
+   * padding = -margin
+   */
+  margin-right: -100px;
+  padding-right: 100px;
+}

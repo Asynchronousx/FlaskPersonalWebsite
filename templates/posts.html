@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="hide-scroll">
+<div class="viewport">
+<div class="w3-container ml-1 w3-animate-opacity">
+    {% if posts %}
+        {% for post in posts %}
+          <div class="format-date">{{ post.date }}<br></div>
+          <div class="format-title">{{ post.title }}</div>
+          <div class="format-content">{{ post.content|safe }}</div>
+          
+        {% endfor %}
+        <p class="copyright">© 2019 Giovanni Hauber</p>
+    {% else %}
+        <div class="text-center">
+            <h1>No posts found yet.</h1>
+            <p class="copyright">© 2019 Giovanni Hauber</p>
+        </div>
+    {% endif %}
+</div>
+</div>
+</div>
+{% endblock content %}

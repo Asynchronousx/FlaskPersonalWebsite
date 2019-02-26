@@ -1,0 +1,18 @@
+/*Button Styles*/
+.icon-social {
+    color: #c6cddb;
+    font-size: 25px;
+    outline: none;
+  }
+  
+  .icon-social:hover {
+    color: white;
+    -webkit-transition: color 300ms linear;
+    -ms-transition: color 300ms linear;
+    transition: color 300ms linear;
+  }
+  
+  /* Remove the dotted outline when clicked or focused*/
+  a, a:active, a:focus {
+    outline: none;
+  }

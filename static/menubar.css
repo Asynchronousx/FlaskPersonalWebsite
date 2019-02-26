@@ -1,0 +1,53 @@
+/*Navigation Bar*/
+#menubar {
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+  /*previous: #2c3e50*/
+  background: #3b3e48;
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  transition: color .25s;
+  box-shadow: none;
+}
+
+#menubar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  display: block;
+  zoom: 1;
+}
+
+#menubar ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+#menubar ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 15px 25px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  position: relative;
+  transition: color .25s;
+  outline: none;
+}
+
+#menubar ul li a:hover {
+  color: #fbc531;
+}
+
+#menubar ul li a {
+  box-shadow: none;
+}
+
+#menubar ul li.active a {
+  color: #fbc531;
+}

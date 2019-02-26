@@ -1,0 +1,74 @@
+/*Centering text*/
+  .home-center-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin: 10% 0;
+    min-height: 200px;
+    align-items: center;
+   }
+    
+   .home-center-about {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+    margin: 10% 0;
+    min-height: 200px;
+    align-items: center;
+   }
+    
+   
+  .ml-1 {
+    margin-top: 2% !important;
+    margin-left: 30% !important;
+  }
+
+  .center-text {
+    width: 50%;
+  }
+
+  /*Text styling and blinking cursor*/
+  .text { 
+    position: relative;
+    display: inline-block;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 40px;
+    font-size: 26px;
+    letter-spacing: .06em;
+    color: #c6cddb;
+  
+  }
+  
+  .text::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -15px;
+    /* Remove display: inline-block if not required to be on the same line as text etc */
+    display: inline-block;
+    background-color: #1ca754;
+    vertical-align: top;
+    width: 10px;
+    /* Set height to the line height of .text */
+    height: 40px;
+    -webkit-animation: blink 1s step-end infinite;
+    animation: blink 1s step-end infinite;
+  }
+  
+  @-webkit-keyframes blink {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
